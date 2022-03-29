@@ -46,14 +46,20 @@ Task 3
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
+    const colors = ["pink", "blue", "purple", "yelow", "green"];
+    const index = 0;
 
-    const changeColour = document.querySelector("#bgrChangeBtn")
-    changeColour.addEventListener("click", styleBackground)
+    const changeColour = document.querySelector("#bgrChangeBtn");
+    changeColour.addEventListener("click", styleBackground);
 
-    function styleBackground(){
-        const changeColour = document.querySelector("body")
-        const colour = ["pink", "blue", "red", "yelow", "green"]
-        changeColour.style.backgroundColor = "pink"
+    function styleBackground(e){
+        const bodyColor = document.querySelector("body")
+        if(index >= colors.length){
+            index = 0;
+        }
+      
+        bodyColor.style.backgroundColor = colors[index]
+        index +1  
     }
 
 /*
@@ -112,6 +118,23 @@ Task 7
 Create an array of 5 different colors.
 Using the same function in Task 3, every time the 'Change colour' button is clicked, the background color will be changed with the next color in the array.
 The next color when you are in the last color of the array will be the first color again.
+
+ const colors = ["pink", "blue", "purple", "yelow", "green"];
+    const index = 0;
+
+    const changeColour = document.querySelector("#bgrChangeBtn");
+    changeColour.addEventListener("click", styleBackground);
+
+    function styleBackground(e){
+        const bodyColor = document.querySelector("body")
+        if(index >= colors.length){
+            index = 0;
+        }
+      
+        bodyColor.style.backgroundColor = colors[index]
+        index +1  
+    }
+
+
 */
 
-const colour = ["pink", "blue", "red", "yelow", "green"]

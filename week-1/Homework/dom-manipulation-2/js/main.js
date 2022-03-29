@@ -28,3 +28,22 @@ function greenColourBtn(){
     btnPrimary.style.backgroundColor = "black"
     btnVolunteer.style.backgroundColor = "#8c9c08"
 }
+
+const emailInput = document.querySelector("#exampleInputEmail1")
+const nameInput = document.querySelector("#example-text-input")
+const descriptionInput = document.querySelector("#exampleTextarea")
+const form = document.querySelector("form")
+
+const submitForm = (e) => {
+    e.preventDefault()
+    const validEmail = emailInput.value.length > 0 && emailInput.value.includes("@")
+    const validName = nameInput.value.length > 0
+    const validDescription = descriptionInput.value.length > 0
+
+    const validForm = validEmail && validName && validDescription
+    
+}
+
+
+
+form.addEventListener("submit", (e) => submitForm(e))
