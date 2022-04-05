@@ -17,3 +17,11 @@ var car = {
 
 */
 
+const airFryer = {
+    model: "Cecofry Advance",
+    color: "InoxDark",
+    voltage: 1500,
+    weight: 4.26,
+    capacity: 3.5,
+}
+

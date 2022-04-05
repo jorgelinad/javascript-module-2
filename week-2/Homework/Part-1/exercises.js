@@ -15,6 +15,16 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  arrayOfPeople.forEach((person) => {
+    const namePerson = document.createElement("h1");
+    const jobPerson = document.createElement("h2");
+
+    namePerson.textContent = person.name;
+    jobPerson.textContent = person.job;
+
+    content.appendChild(namePerson);
+    content.appendChild(jobPerson);  
+  });
 }
 
 /**
@@ -26,6 +36,16 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+  const content = document.querySelector("#content");
+  const list = document.createElement("ul");
+  content.appendChild(list);
+
+  shopping.forEach((item) => {
+    const ItemShopping = document.createElement("li");
+    ItemShopping.textContent = item;
+
+    list.appendChild(ItemShopping);
+  });
 }
 
 /**
@@ -59,7 +79,24 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
-}
+  const listBook = document.createElement("ul");
+    
+  books.forEach(libros => {
+    const bookBox = document.createElement("li");
+    const bookName = document.createElement("p");
+    bookName.textContent = libros.title + "-" + libros.author;
+    const bookImg = document.createElement("img");
+    bookImg.setAttribute("src", libros.img);
+    bookBox.appendChild(bookName);
+    bookBox.appendChild(bookImg);
+    listBook.appendChild(bookBox);
+    if (libros.alreadyRead) {
+      bookBox.style.backgroundColor = 'green'} 
+    else{
+      bookBox.style.backgroundColor = 'red'}
+    });
+      content.appendChild(listBook);
+  };
 
 //
 //

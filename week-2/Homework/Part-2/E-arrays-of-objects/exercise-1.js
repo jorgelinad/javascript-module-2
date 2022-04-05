@@ -25,12 +25,11 @@ WRITE YOUR CODE BELOW
 */
 
 
-let persons = // Complete here
+const persons = [person1, person2, person3]
 
-let personNames = // Complete here
+const personNames = persons.map((person) => person.name);
 
-let personsYoungerThan28YearsOld = // Complete here
-
+const personsYoungerThan28YearsOld = persons.filter((person) => person.age <= 28);
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
