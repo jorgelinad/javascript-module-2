@@ -42,7 +42,7 @@ WRITE YOUR CODE BELOW
 
 let destinationNamesWithin500Kms = travelDestinations.filter((destination) => destination.distanceKms <= 500 ).map((destination) => destination.destinationName)// Complete here
 
-let destinationNameReachableByFerry = travelDestinations.find((destination) => destination.transportations.some((transporte) => transporte == "ferry")).destinationName;// Complete here
+let destinationNameReachableByFerry = travelDestinations.filter((destination) => destination.transportations.includes((transporte) => transporte == "ferry")).destinationName;// Complete here
 
 let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter((destination) => destination.distanceKms > 300 && destination.transportations.some((transporte) => transporte == "train"))
 .map((destination) => destination.destinationName) // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
