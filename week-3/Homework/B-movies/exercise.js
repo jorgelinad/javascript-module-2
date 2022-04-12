@@ -59,31 +59,54 @@ var movies = [
 ];
 
 // create showMovies function
-
-function showMovies(movie){
-  for (let index = 0; index < movies.length; index++) {
-  const elementMovies = movies[index];
-  } 
-
-  movie.forEach( newElement => {
-    const allMovies = document.querySelector("#all-movies")
-    const moviesNumber = document.querySelector("#movies-number")
-    const titleM = document.createElement("p");
-    const directorM = document.createElement("p");
-
-    titleM.textContent = newElement.title;
-    directorM.textContent = newElement.director;
-
-    allMovies.appendChild(titleM);
-    allMovies.appendChild(directorM);
-
-    moviesNumber.innerText = newElement.movies
+function showMovies(theMovies){
+  const allMovies = document.querySelector("#all-movies")
+  theMovies.forEach(movie => {
+    const titleAndDirectorEl = document.createElement("p");
+    titleAndDirectorEl.innerText = movie.title + " " + ";" + " " + movie.director;
+    allMovies.appendChild(titleAndDirectorEl);
   });
-  
-}
+  const moviesNumber = document.querySelector("#movies-number");
+  moviesNumber.innerText = theMovies.length
+};
+
+const mySetTimeOut = setTimeout(() => showMovies(movies), 1000)
 
 
 // create a new movie object for your favorite movie
-
+const myMovie = {
+  title: "Just Go With It",
+  director: "Dennis Dugan",
+  type:"Romance/comedy",
+  haveWatched: true,
+};
 
 // create addMovies function
+function addMovies (newMovie) {
+  const timeOut = setTimeout(() => {
+    movies.push(newMovie)
+    showMovies(movies)
+  }, 2000)
+  };
+
+  addMovies(myMovie)
+
+  const formulario = document.querySelector("#button-guardar")
+  formulario.addEventListener("click", ejecucionFormulario);
+
+  function ejecucionFormulario(event){
+    event.preventDefault()
+
+    const titleEl = document.querySelector("#buscador-title")
+    const directorEl = document.querySelector("#buscador-director")
+    const typeEl = document.querySelector("#buscador-type")
+    const haveWatchedEl = document.querySelector("#buscador-havewatched")
+
+    const guardarMovie = {
+      title: titleEl.value,
+      directorEl: directorEl.value,
+      type: typeEl.value,
+      haveWatched: haveWatchedEl.value,
+    }
+    addMovies(guardarMovie)
+  }

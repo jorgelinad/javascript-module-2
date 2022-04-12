@@ -14,11 +14,26 @@
     }
   </style>
 </head>
-
 <body>
   <div id="main">
     <div class="jumbotron">
       <h1>My movies</h1>
+      <form id="my-movie">
+        <li>
+        <label for="">Title</label>
+        <input id="buscador-title" type="text">
+        </li><li>
+        <label for="">Director</label>
+        <input id="buscador-director" type="text">
+        </li><li>
+        <label for="">Type</label>
+        <input id="buscador-type" type="text">
+        </li><li>
+        <label for="">Have Watched</label>
+        <input id="buscador-havewatched" type="text">
+        </li>
+        <button id="button-guardar">Guardar</button>
+      </form>
       <div id="all-movies">
         <p class="alert alert-info">Number of movies: <span id="movies-number"></span></p>
       </div>

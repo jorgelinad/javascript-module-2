@@ -22,7 +22,7 @@ Update your code to make the colour change every 5 seconds to something differen
 const colorInterval = setInterval(cambioColor, 5000);
 
 function cambioColor() {
-  let bodyColor = document.querySelector("body");
+  const bodyColor = document.querySelector("body");
   bodyColor.style.backgroundColor = bodyColor.style.backgroundColor == "pink" ? "grey" : "pink";
 }
 
