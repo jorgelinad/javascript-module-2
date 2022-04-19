@@ -1,1 +1,63 @@
 /** Write your CSS in here **/
+
+h1 {
+    size: 150px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:teal;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+body {
+    background-color: powderblue;
+}
+
+#autoBackBtn {
+    background-color: paleturquoise;
+    border: 2px solid gray;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 80px;
+}
+
+#anteriorBtn {
+    background-color: paleturquoise;
+    border: 2px solid gray;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-right: 10px;
+}   
+
+#stopBtn {
+    background-color: paleturquoise;
+    border: 2px solid gray;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#siguienteBtn {
+    background-color: paleturquoise;
+    border: 2px solid gray;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#autoNextBtn {
+    background-color: paleturquoise;
+    border: 2px solid gray;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+#container {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#imgPlaya {
+    width: 600px;
+}

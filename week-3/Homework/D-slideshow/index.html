@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -13,12 +12,16 @@
   </head>
   <body>
     <!-- Write your HTML in here -->
-  <h1>Cayo Sombrero</h1>
-  <div id="carousel">
-    <img id="lugar-img" src="" alt="playa">
-    <button id="retroceder">Retroceder</button>
-    <button id="avanzar">Avanzar</button>
-</div>
-<script src="slideshow.js"></script>
+    <h1>Cayo Sombrero</h1>
+    <div id="container">
+      <img src="" alt="playa" id="imgPlaya"> <br>
+      <button id="autoBackBtn">AutoBack</button>
+      <button id="anteriorBtn">Anterior</button>
+      <button id="stopBtn">Stop</button>
+      <button id="siguienteBtn">Siguiente</button>
+      <button id="autoNextBtn">AutoNext</button>
+    </div>
+    
+    <script src="slideshow.js"></script>
   </body>
 </html>
