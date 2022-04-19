@@ -41,9 +41,24 @@ var product2 = {
   price: 9.99,
   stock: 2
 };
+var product3 = {
+  id: 3,
+  name: "Funda Xiomi Note 10",
+  price: 5.75,
+  stock: 5
+};
+var product4 = {
+  id: 4,
+  name: "Batidora Cecotec",
+  price: 15.99,
+  stock: 6
+};
 
 products.push(product1);
 products.push(product2);
+products.push(product3);
+products.push(product4);
+
 
 var shoppingCart = {
   totalPrice: 0,
@@ -51,11 +66,17 @@ var shoppingCart = {
 };
 
 function addToShoppingCart(id){
-
+  products.forEach(product => {
+    if (product.id == id) {
+      shoppingCart.totalPrice = product.price + shoppingCart.totalPrice;
+      shoppingCart.selectedProducts.push(product)
 }
 
 function removeFromShoppingCart(id){
-
+const productPosition = shoppingCart.selectedProducts.findIndex(products => products.id === id)
+  console.log(productPosition);
+  shoppingCart.totalPrice = shoppingCart.totalPrice - shoppingCart.selectedProducts[productPosition].price
+  shoppingCart.selectedProducts = shoppingCart.selectedProducts.filter(product => product.id != id)
 }
 
 function shop(){

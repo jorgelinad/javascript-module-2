@@ -100,4 +100,68 @@ var mentors = [
 ];
 
 //YOUR CODE HERE
+//Ejercicio 1
+const cityAndSkills = mentors.filter( mentor => mentor.job.city == "Barcelona" && mentor.skills.includes("React"));
+cityAndSkills.forEach( mentor => {
+  console.log(`Hola, mi nombre es ${mentor.firstName} ${mentor.lastName}. Trabajo en Barcelona y conozco React.`);
+});
+
+//Ejercicio 2
+const cityBarcelona = mentors.filter( mentor => mentor.job.city == "Barcelona");
+cityBarcelona.forEach( mentor => {
+  mentor.class = "Jun1",
+  mentor.skills.push = "SQL"
+})
+
+//Ejercicio 3
+mentors.forEach(mentor => mentor.addSkill = function(skill){
+  this.skills(skill)
+})
+
+//Ejercicio 4
+function addSkill(mentors, newSkill){
+  mentors.forEach(mentor => {
+    mentor.skills(newSkill)
+  })
+}
+
+//Ejercicio 5
+function removeSkill(mentors, newSkill){
+  mentors.forEach(mentor => {
+  const position = mentor.skills.findIndex(habilidad => habilidad === newSkill)
+   if (position != -1) {
+     mentor.skills.splice(position,1)
+   }
+  })
+}
+
+//Ejercicio 6
+function mentorWithMoreSkills(mentors){
+  let result = 0;
+  let indexMentors = 0;
+  mentors.forEach((mentor,index) => {
+  if (result < mentor.skills.length) {
+    result = mentor.skills.length
+    indexMentors = index
+  }
+  })
+  return mentors [indexMentors]
+}
+
+
+//Ejercicio 7
+mentors.forEach( mentor =>{
+  mentor.addStudentLikes = function(){
+    this.studentLikes++;
+  }
+})
+
+//Ejercicio 8
+function addLikes(mentors){
+  mentors.forEach(mentor =>{
+    mentor.studentLikes++
+  })
+}
+
+
 

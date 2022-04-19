@@ -7,7 +7,14 @@ const studentGrades = {
     george: 17,
     abdul: 19,
   };
-  
+
+  for (const students in studentGrades) {
+    if(studentGrades[students] > 18){
+      console.log(`${students.toUpperCase()} - ${studentGrades[students]} `);
+    }
+  }
+
+
   // Prints
   // TOM - 20
   // ABDUL - 19
